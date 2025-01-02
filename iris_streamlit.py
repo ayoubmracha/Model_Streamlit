@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import pickle 
 from sklearn.ensemble import RandomForestClassifier
-st.image("ehtp.png", caption=" ", use_column_width=True)
+st.image("ehtp.png", caption=" ", use_container_width=True)
 with open("modeliris6.pkl", "rb") as file:
     model = pickle.load(file)
 st.title("MSDE6 : ML Course")
@@ -12,7 +12,7 @@ st.markdown("This app predicts the Iris flower type")
 input_choice = st.selectbox('How would you like to use the prediction model ?', ['','Input parametrs directly', 'Load a file of data'])
 
 # Afficher les sliders si l'utilisateur sélectionne "input parameters directly"
-st.sidebar.image("flower.jpg", caption=" ", use_column_width=True)
+st.sidebar.image("flower.jpg", caption=" ", use_container_width=True)
 if input_choice == "Input parametrs directly":
 
     st.sidebar.markdown("### User Input Parameters:")
